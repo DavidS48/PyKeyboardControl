@@ -1,26 +1,28 @@
 import time
-
 from keyboard import *
+
+# Write some functions:
 
 def print_hello():
     print("Hello!")
 
 def print_dot():
-    time.sleep(0.1)
     print(".")
+    time.sleep(0.1)
 
 def print_goodbye():
     print("Goodbye!")
 
+# Attach them to keys...
+
+# One to be run once when "a" is pressed:
 keyboard_controls.add_press_action("a", print_hello)
-keyboard_controls.add_release_action("a", print_goodbye)
+# One to be repeated for as long as "a" is held:
 keyboard_controls.add_hold_action("a", print_dot)
+# And one to be run once when "a" is released again:
+keyboard_controls.add_release_action("a", print_goodbye)
 
-keyboard_controls.add_press_action("b", print_goodbye)
-keyboard_controls.add_release_action("b", print_hello)
-keyboard_controls.add_hold_action("b", print_dot)
-
-
+# Then go!
 keyboard_controls.go()
 
 
