@@ -8,3 +8,5 @@ https://github.com/martinohanlon/superkeys
 but I was left wondering whether another approach would also work.
 
 This module is the other approach.
+
+The really clever stuff is done by Zeth's Inputs library. The stuff for reading in key presses is cribbed from superkeys. The rest is basically a noddy event loop wrapped around that.
